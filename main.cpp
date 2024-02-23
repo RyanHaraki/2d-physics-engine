@@ -5,7 +5,7 @@
 #include <memory>
 #include <vector>
 
-#define dt 0.01f
+#define dt 0.01f // delta time
 
 using namespace std;
 
@@ -31,7 +31,7 @@ int main()
 
         window.clear(sf::Color::Black);
 
-        // Apply force directly to the managed Rigidbody
+        // apply forces/setup simulation here
 
         bodyManager.updateBodies(dt);
 

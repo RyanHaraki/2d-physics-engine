@@ -8,7 +8,6 @@ public:
     sf::Vector2f position;      // position of x, y coordinates
     sf::Vector2f position_last; // position of x, y coordinates
     sf::Vector2f acceleration;  // acceleration of x, y coordinates (change in speed and direction)
-    sf::CircleShape shape;      // shape of object
     float radius = 10.0f;       // radius of object
     float mass = 1.0f;          // mass of object
 
@@ -19,9 +18,6 @@ public:
     {
         position = sf::Vector2f(0, 0);
         position_last = sf::Vector2f(0, 0);
-        shape = sf::CircleShape(10);
-        shape.setFillColor(sf::Color::Green);
-        shape.setPosition(position);
         radius = 10;
         mass = 1;
     };
@@ -31,9 +27,6 @@ public:
     {
         position = sf::Vector2f(x, y);
         position_last = sf::Vector2f(x, y);
-        shape = sf::CircleShape(r);
-        shape.setFillColor(sf::Color::Green);
-        shape.setPosition(position);
         radius = r;
         mass = m;
     }
@@ -48,7 +41,6 @@ public:
         const sf::Vector2f velocity = position - position_last;
         position_last = position;
         position += velocity + acceleration * (deltaTime * deltaTime);
-        shape.setPosition(position);
     }
 
     // apply a force to the object
