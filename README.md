@@ -1,4 +1,4 @@
-# 2d-physics-engine
+# 2D Physics Engine
 
 I wanted to simulate galaxy collisions, didn't really like any physics engines, so making my own now. This is a simple 2d physics engine that uses the Verlet method to calculate position. The goal is that I'll eventually be able to simulate a galaxy collision with it.
 
