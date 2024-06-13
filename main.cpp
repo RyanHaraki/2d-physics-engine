@@ -20,6 +20,8 @@ int main()
     // Add a Rigidbody to the manager and get a pointer to it for direct manipulation
     Rigidbody *rbPtr = bodyManager.addBodyAndGetPtr(std::make_unique<Rigidbody>(100, 100, 10, 1));
 
+    printf("test 2");
+    
     while (window.isOpen())
     {
         sf::Event event;

@@ -6,6 +6,7 @@ public:
     void render(const BodyManager &bodyManager, sf::RenderWindow &window)
     {
 
+        printf("Test");
         // render all objects
         sf::CircleShape circle{1.0f};
         circle.setPointCount(32);
